@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser')
  
  const citoyenRoutes = require('./Routes/citoyenRoutes');
  const agentMunicipaliteRoutes = require('./Routes/agentmunicipaliteRoutes')
+const locataireRoutes = require('./Routes/locataireRoutes')
 
 
 //setting up your port
@@ -32,6 +33,9 @@ app.use('/api/citoyen', citoyenRoutes);
 
 //routes for the agentmunicipale API
 app.use('/api/agentmunicipale',agentMunicipaliteRoutes);
+
+//routes for the locataire API
+app.use('/api/locataire', locataireRoutes );
 
 
 //listening to server connection

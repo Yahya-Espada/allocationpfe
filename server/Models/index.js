@@ -28,6 +28,9 @@ const sequelize = new Sequelize(`postgres://postgres:admin@localhost:5432/PFE2`,
 
 db.citoyen = require('./citoyenModel')(sequelize, DataTypes)
 db.AgentMunicipalite = require('./agentMunicipaliteModel')(sequelize, DataTypes)
+db.locataire = require('./locataireModel')(sequelize, DataTypes) 
+
+
 
 //exporting the module
 module.exports = db

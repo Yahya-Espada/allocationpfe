@@ -8,15 +8,15 @@ const { createAgent, getAgentById, updateAgentById, deleteAgentById,updateAgentB
 const router = express.Router();
 
 
-router.post('/agents', saveAgent, createAgent);
-router.post('/agents/changement-mot-de-passe/:email',changerMotDePasse);
+router.post('/createAgent', saveAgent, createAgent);
+router.post('/changement-mot-de-passe/:email',changerMotDePasse);
 
-router.get('/agents', getAgents);
+router.get('/getAgents', getAgents);
 
-router.get('/agents/:id', getAgentById);
+router.get('/getAgentById/:id', getAgentById);
 
-router.put('/agents/:id', updateAgentById);
-router.post('/agents/UpdateNewAgentByEmail/:email', updateAgentByEmail);
-router.delete('/agents/:id', deleteAgentById);
+router.put('/updateAgentById/:id', updateAgentById);
+router.post('/UpdateNewAgentByEmail/:email', updateAgentByEmail);
+router.delete('/deleteAgentById/:id', deleteAgentById);
 
 module.exports = router;

@@ -11,7 +11,7 @@ const router = express.Router();
 router.post('/signup', citoyenAuth.saveCitoyen, signup);
 
 // Define a route to delete a user
-router.delete('/citoyen/:id', deleteCitoyen);
+router.delete('/deleteCitoyen/:id', deleteCitoyen);
 
 //login route
 router.post('/login', login );
